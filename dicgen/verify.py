@@ -17,7 +17,7 @@ stretch is recovered to a small fraction of a pixel.
 
 Usage::
 
-    python -m dicgen.verify --dataset examples/JB01
+    python -m dicgen.verify --dataset examples/demo_512x512
     python -m dicgen.verify --dataset out/seq --json report.json
 
 Exit code is 0 when every check passes and 1 otherwise, so it can be used in a

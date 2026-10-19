@@ -569,23 +569,31 @@ a generated directory (through its `metadata.json`) and answers three questions 
 pixel data alone:
 
 ```bash
-python -m dicgen.verify --dataset examples/JB01        # or: dicgen-verify --dataset ...
+python -m dicgen.verify --dataset examples/demo_512x512   # or: dicgen-verify --dataset ...
 ```
 
 ```
-dicgen.verify 1.0.0 -- examples/JB01
-  40 images, 1024x1024 px, deformation = affine, sampling = analytic, noise sigma = 2
-  model-aligned criterion: MAE after undoing the model <= max(3.0, 0.15 * |diff|) + 6.0 (noise)
+dicgen.verify 1.0.0 -- examples/demo_512x512
+  5 images, 512x512 px, deformation = affine, sampling = analytic, noise sigma = 2
+  model-aligned criterion: MAE after undoing the model <= max(3.0, 0.15 * |diff|) + 6.0 (noise); DIC |du| <= 0.100 px, DIC |dgrad| <= 0.0100
+
   img    t     |diff|  aligned   limit  in-frame   DIC |du|max   DIC |dgrad|max   ZNCC
   ------------------------------------------------------------------------------------
-     2  0.026     20.55     2.78    9.08     98.8%        0.0228          0.0047   0.996
-    40  1.000     47.93     2.36   13.19     71.3%        0.0668          0.0036   0.997
-  PASSED: every image differs from the reference, matches the recorded deformation, and
-  the local DIC recovers the analytic fields.
+     1  0.000      0.00     0.00    9.00    100.0%             -               -       -
+     2  0.250      8.43     3.35    9.00     99.3%        0.0226          0.0030   0.996
+     3  0.500     14.29     3.34    9.00     98.8%        0.0271          0.0022   0.995
+     4  0.750     19.53     3.32    9.00     98.3%        0.0322          0.0025   0.995
+     5  1.000     24.08     3.32    9.61     97.9%        0.0230          0.0021   0.995
+
+  PASSED: every image differs from the reference, matches the recorded deformation, and the local DIC recovers the analytic fields.
 ```
 
+The transcript above is the committed `examples/demo_512x512` sequence, so it is reproducible
+from a fresh clone.
+
 * **`|diff|`** — mean `|image − reference|` in grey levels: shows that the frames *are*
-  different (48 grey levels at full load for this 40 % stretch, against a noise level of 2).
+  different (24 grey levels at full load for the 2 % stretch of the demo, against a noise
+  level of 2).
 * **`aligned`** — the same difference after pulling the image back onto the reference grid
   with the deformation recorded in `metadata.json`. Undoing the model must collapse the
   difference to the interpolation/noise floor; `limit` is the tolerance and `in-frame` the

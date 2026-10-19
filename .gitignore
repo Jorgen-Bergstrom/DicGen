@@ -18,8 +18,10 @@ data/
 out/
 output/
 
-# Large regenerated validation runs (examples/demo_512x512 is committed)
-examples/JB01/
+# Only the committed demo sequence is tracked under examples/;
+# any other generated run is kept locally.
+examples/*
+!examples/demo_512x512/
 
 # Local development notes (not part of the published repository)
 draft1.txt
