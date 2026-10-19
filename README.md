@@ -15,6 +15,9 @@ deformation of each image. Everything random comes from one seeded
 `numpy.random.Generator`, there are no wall-clock timestamps, and the tool is fully
 non-interactive.
 
+![Demo Image](examples/demo_512x512/image0001.png)
+
+
 ## What you get
 
 - A grayscale (8-bit PNG) image sequence `image0001.png … imageNNNN.png`, reference
