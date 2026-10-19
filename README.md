@@ -1,6 +1,6 @@
-# dicgen — synthetic 2D DIC validation dataset generator
+# DicGen — synthetic 2D DIC validation dataset generator
 
-`dicgen` is a small, self-contained Python command-line application that generates a
+`DicGen` is a small, self-contained Python command-line application that generates a
 **synthetic 2D Digital Image Correlation (DIC) dataset**: a grayscale speckle image
 sequence of a specimen that deforms, together with the **exact, analytic ground-truth
 displacement and strain fields** that are physically present in those images. Its
