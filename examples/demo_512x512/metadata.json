@@ -1,0 +1,331 @@
+{
+  "arguments": {
+    "background": 128.0,
+    "coverage_tolerance": 0.01,
+    "dot_amplitude_max": 120.0,
+    "dot_amplitude_min": 70.0,
+    "dot_coverage": 0.5,
+    "dot_profile": "taper",
+    "dot_radius_max": 6.0,
+    "dot_radius_min": 3.0,
+    "dot_softness": 0.7,
+    "dry_run": false,
+    "gt_grid_nx": 16,
+    "gt_grid_ny": 16,
+    "height": 512,
+    "interpolation_order": 3,
+    "min_dot_distance": 0.0,
+    "mode": "affine",
+    "movie_fps": 10.0,
+    "noise_multiplicative_sigma": 0.0,
+    "noise_sigma": 2.0,
+    "num_images": 5,
+    "output_dir": "examples/demo_512x512",
+    "overwrite": false,
+    "rotation_deg": 0.5,
+    "sampling": "analytic",
+    "save_displacement_npy": false,
+    "save_ground_truth": true,
+    "save_masks": true,
+    "save_movie": true,
+    "save_qa_maps": false,
+    "seed": 0,
+    "sin_amplitude_x": 0.0,
+    "sin_amplitude_y": 0.0,
+    "sin_wavelength_x": null,
+    "sin_wavelength_y": null,
+    "strain_x": 0.02,
+    "strain_y": -0.01,
+    "translation_x": 0.0,
+    "translation_y": 0.0,
+    "width": 512
+  },
+  "coverage": {
+    "coverage_any": 0.4989356994628906,
+    "coverage_error": -0.001064300537109375,
+    "coverage_half_amplitude": 0.4136848449707031,
+    "coverage_history": [
+      {
+        "coverage_any": 0.5880012512207031,
+        "iteration": 0,
+        "num_dots": 2754
+      },
+      {
+        "coverage_any": 0.4989356994628906,
+        "iteration": 1,
+        "num_dots": 2153
+      }
+    ],
+    "coverage_target": 0.5,
+    "iterations": 2,
+    "num_dots": 2153
+  },
+  "deformation": {
+    "image_center_px": [
+      255.5,
+      255.5
+    ],
+    "load_stepping": "t_i = i / (n - 1)",
+    "mode": "affine",
+    "total_rotation_deg": 0.5,
+    "total_strain_x": 0.02,
+    "total_strain_y": -0.01,
+    "total_translation_px": [
+      0.0,
+      0.0
+    ]
+  },
+  "deterministic": true,
+  "dots": {
+    "amplitude_mean": 95.5274101515522,
+    "num_dots": 2153,
+    "radius_max_px": 5.995469769124036,
+    "radius_mean_px": 4.49826754331429,
+    "radius_min_px": 3.000238165853885,
+    "radius_std_px": 0.8562664463761034
+  },
+  "file_naming": "image%0*d.png, 1-based, image 0 (undeformed reference) first",
+  "files": [
+    {
+      "path": "ground_truth.csv",
+      "sha256": "57aeb40a75463444af81662af4b3eb90a48ae2a03178402d1ef37b0b8e487e31",
+      "size_bytes": 1200
+    },
+    {
+      "path": "ground_truth_grid.csv",
+      "sha256": "4f2d59995c51d6570255f2b51af464db28ea00678a72655184c8acdb2a874f34",
+      "size_bytes": 263489
+    },
+    {
+      "path": "image0001.png",
+      "sha256": "9b06124d6e0c2c4a87ad6f21d40faea9f71f0302ee0d878e232167e2dce94ae3",
+      "size_bytes": 168572
+    },
+    {
+      "path": "image0002.png",
+      "sha256": "7d88ec3f27897c419f98a02f0a4cfbafea016d38455d28c572240902ce812181",
+      "size_bytes": 168365
+    },
+    {
+      "path": "image0003.png",
+      "sha256": "82961c6dbaa7df03915502a3b656f8f86ed715b9e89971216eee398a5b29c7ea",
+      "size_bytes": 168229
+    },
+    {
+      "path": "image0004.png",
+      "sha256": "6ab21875cb9b6a5dfae7ec5cd8c8ee0b689379da376c5b0a5c22bf3a17187164",
+      "size_bytes": 168112
+    },
+    {
+      "path": "image0005.png",
+      "sha256": "351bb3a535795c0e34994639452aad4ec3299db253da61b9a622e78068f1f8fe",
+      "size_bytes": 167791
+    },
+    {
+      "path": "masks/mask0001.png",
+      "sha256": "45b1172af9fef8be4af4a90d2259d66c9103c64ec442f0af8e47d56ed256dfbd",
+      "size_bytes": 1301
+    },
+    {
+      "path": "masks/mask0002.png",
+      "sha256": "c74f126c0a9748ff458984065a9dbe4fb205d888f177119ce844e0be1d378b56",
+      "size_bytes": 1313
+    },
+    {
+      "path": "masks/mask0003.png",
+      "sha256": "7c0bdbbebe312ce3351b0fdd61a0dcb5a4edf488bd668aeb9ce53dc87a29377c",
+      "size_bytes": 1321
+    },
+    {
+      "path": "masks/mask0004.png",
+      "sha256": "925e5b257a1bb7eca48d7c8598be9f8cc6591867a19709717b9d96ba973b61e2",
+      "size_bytes": 1329
+    },
+    {
+      "path": "masks/mask0005.png",
+      "sha256": "21a746f6304b96f600631690e744d170bb16165799af03a4303e54836aea2420",
+      "size_bytes": 1337
+    },
+    {
+      "path": "sequence.mp4",
+      "sha256": "db095e26e09b1fafcdb17b900cfee8496e3804ac051ea0a37ce09fbba3422f91",
+      "size_bytes": 123736
+    }
+  ],
+  "grey_level_statistics": [
+    {
+      "image": "image0001.png",
+      "max": 137.46391537727106,
+      "mean": 87.7172432803938,
+      "min": 0.8518175265483796,
+      "valid_fraction": 1.0
+    },
+    {
+      "image": "image0002.png",
+      "max": 136.6316817453992,
+      "mean": 87.82635004268425,
+      "min": 1.4597177155416103,
+      "valid_fraction": 0.9954071044921875
+    },
+    {
+      "image": "image0003.png",
+      "max": 137.21993624151781,
+      "mean": 87.89136849744781,
+      "min": 1.4731127167474636,
+      "valid_fraction": 0.9929733276367188
+    },
+    {
+      "image": "image0004.png",
+      "max": 136.93581807406684,
+      "mean": 88.00501055107429,
+      "min": 1.1009475877801673,
+      "valid_fraction": 0.9905471801757812
+    },
+    {
+      "image": "image0005.png",
+      "max": 137.09947822164347,
+      "mean": 88.12263272186337,
+      "min": 2.3887270338014766,
+      "valid_fraction": 0.988128662109375
+    }
+  ],
+  "ground_truth": {
+    "columns_grid": [
+      "image_index",
+      "image",
+      "t",
+      "X_px",
+      "Y_px",
+      "x_px",
+      "y_px",
+      "ux_px",
+      "uy_px",
+      "eps_xx",
+      "eps_yy",
+      "gamma_xy",
+      "eps_xx_img",
+      "eps_yy_img",
+      "gamma_xy_img",
+      "J11",
+      "J12",
+      "J21",
+      "J22",
+      "in_ref",
+      "in_def"
+    ],
+    "columns_image": [
+      "image_index",
+      "image",
+      "t",
+      "F11",
+      "F12",
+      "F21",
+      "F22",
+      "tx_px",
+      "ty_px",
+      "e_x_t",
+      "e_y_t",
+      "theta_t_deg",
+      "eps_xx",
+      "eps_yy",
+      "gamma_xy",
+      "strain_uniform",
+      "eps_xx_img_mean",
+      "eps_yy_img_mean",
+      "gamma_xy_img_mean",
+      "F_lambda_max",
+      "F_det",
+      "u_max_px",
+      "u_mean_px",
+      "valid_fraction"
+    ],
+    "displacement_field_npy": null,
+    "grid_csv": "ground_truth_grid.csv",
+    "grid_points": [
+      16,
+      16
+    ],
+    "per_image_csv": "ground_truth.csv",
+    "strain_convention": "engineering / small strain: eps_xx = e_x * t, eps_yy = e_y * t, gamma_xy = 0 (parameter strains, uniform for the affine model); eps_*_img are the components of sym(J) - I in the image frame",
+    "written": true
+  },
+  "mask_convention": "mask*.png: 255 = valid (correlate), 0 = invalid (no speckle data)",
+  "metadata_format_version": 1,
+  "movie": {
+    "codec": "h264",
+    "container": "mp4",
+    "filename": "sequence.mp4",
+    "fps": 10.0,
+    "frames": 5,
+    "height": 512,
+    "pixel_format": "yuv420p",
+    "size_bytes": 123736,
+    "width": 512,
+    "written": true
+  },
+  "noise": {
+    "additive_sigma_grey_levels": 2.0,
+    "applied_to": "every image, independently, after warping",
+    "clipping": "grey levels clipped to [0, 255] and rounded when writing the 8-bit PNG",
+    "multiplicative_sigma": 0.0
+  },
+  "notes": [
+    "This directory is fully regenerated by dicgen; unrelated files are never touched.",
+    "Same seed + same arguments produce byte-identical files.",
+    "Displacement/strain values are analytic ground truth, not measured."
+  ],
+  "sampling": {
+    "interpolation_library": null,
+    "interpolation_order": null,
+    "method": "analytic",
+    "out_of_bounds": "filled with the background grey level and flagged invalid in the mask",
+    "valid_mask": "X inside [0, W-1] x [0, H-1]; bicubic mode also shrinks by 2 px of stencil"
+  },
+  "sequence": {
+    "deformed_coordinates": "x = center + F_i (X - center) + t_i * T",
+    "filename_pattern": "image%04d.png",
+    "filenames": [
+      "image0001.png",
+      "image0002.png",
+      "image0003.png",
+      "image0004.png",
+      "image0005.png"
+    ],
+    "ground_truth_displacement": "u(X) = x - X",
+    "image_center_px": [
+      255.5,
+      255.5
+    ],
+    "image_size_px": [
+      512,
+      512
+    ],
+    "load_fraction": "t_i = i / (n - 1)",
+    "num_images": 5,
+    "reference_image": "image0001.png"
+  },
+  "speckle": {
+    "background_grey": 128.0,
+    "dot_amplitude_max": 120.0,
+    "dot_amplitude_min": 70.0,
+    "dot_coverage_target": 0.5,
+    "dot_coverage_tolerance": 0.01,
+    "dot_profile": "taper",
+    "dot_radius_max_px": 6.0,
+    "dot_radius_min_px": 3.0,
+    "dot_softness_px": 0.7,
+    "height": 512,
+    "min_dot_distance_px": 0.0,
+    "width": 512
+  },
+  "summary": {
+    "coverage_achieved": 0.4989356994628906,
+    "coverage_target": 0.5,
+    "displacement_max_px": 8.764288398746128,
+    "num_dots": 2153,
+    "valid_fraction_mean": 0.9934112548828125
+  },
+  "tool": "dicgen",
+  "version": "1.0.0",
+  "wall_clock_timestamps": false
+}

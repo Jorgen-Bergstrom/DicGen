@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated datasets (keep examples/, ignore scratch runs)
+data/
+out/
+output/
+
+# Large regenerated validation runs (examples/demo_512x512 is committed)
+examples/JB01/
+
+# Local development notes (not part of the published repository)
+draft1.txt
+Prompt1.md
+Summary.md

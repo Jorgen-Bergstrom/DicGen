@@ -1,0 +1,10 @@
+# Runtime dependencies of the synthetic DIC dataset generator.
+# Install with:  python -m pip install -r requirements.txt
+#
+# The optional sequence.mp4 movie (on by default) is encoded by the external
+# `ffmpeg` binary, which is NOT a Python package: install it with your system
+# package manager (e.g. `apt install ffmpeg` / `brew install ffmpeg`), or pass
+# --no-movie. Everything else works without it.
+numpy>=1.23
+scipy>=1.9
+pillow>=9.0

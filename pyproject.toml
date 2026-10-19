@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dicgen"
+version = "1.0.0"
+description = "Synthetic 2D DIC validation dataset generator with exact analytic ground truth"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Jorgen Bergstrom", email = "Jorgen9B@gmail.com" }]
+keywords = ["digital image correlation", "DIC", "speckle", "synthetic data", "ground truth"]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+dicgen = "dicgen.cli:main"
+dicgen-verify = "dicgen.verify:main"
+
+[tool.setuptools]
+packages = ["dicgen"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["error::RuntimeWarning"]
