@@ -136,8 +136,8 @@ The full, always-current list of options is `python -m dicgen --help` (or `dicge
 | `--width` | Image width in pixels | `1024` |
 | `--height` | Image height in pixels | `1024` |
 | `-n`, `--num-images` | Total number of images, including the undeformed reference (image 0) | `11` |
-| `--strain-x` | Total affine engineering stretch in x over the whole sequence (`0.02` = 2%) | `0.0` |
-| `--strain-y` | Total affine engineering stretch in y over the whole sequence | `0.0` |
+| `--strain-x` | Total engineering strain in x over the whole sequence (`0.02` = 2%) | `0.0` |
+| `--strain-y` | Total engineering strain in y over the whole sequence | `0.0` |
 | `--rotation` | Total rotation over the whole sequence, in degrees | `0.0` |
 | `--translation-x` | Total rigid-body translation in x, in pixels | `0.0` |
 | `--translation-y` | Total rigid-body translation in y, in pixels | `0.0` |
