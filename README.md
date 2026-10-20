@@ -40,6 +40,7 @@ non-interactive.
 ## Table of contents
 
 - [Quick start](#quick-start)
+- [Generate synthetic DIC images with an LLM agent](#generate-synthetic-dic-images-with-an-llm-agent)
 - [CLI reference](#cli-reference)
 - [The deformation model](#the-deformation-model)
 - [Image synthesis](#image-synthesis)
@@ -108,6 +109,19 @@ Generation summary
 Both entry points are equivalent: `python -m dicgen …` and the installed console script
 `dicgen …`. The dataset verifier is a separate command: `python -m dicgen.verify --dataset OUT`
 (or `dicgen-verify --dataset OUT`) — see [Verifying a generated dataset](#verifying-a-generated-dataset-dicgenverify).
+
+---
+
+## Generate synthetic DIC images with an LLM agent
+
+DicGen comes with a [`SKILL.md`](SKILL.md) file that makes it easy to generate DIC
+datasets using an LLM agent. For example, give the agent this prompt:
+
+> I want you to create a synthetic DIC dataset in `/tmp/data`. I want 20 images of size
+> 400×400, with an applied engineering strain of 20% in the x-direction and −5% in the
+> y-direction.
+
+This prompt generates the requested DIC images as expected.
 
 ---
 
